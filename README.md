@@ -1,2 +1,1 @@
-# djmarket
-proyecto final curso profesional Django 
+# Django 3.1.1

@@ -3,7 +3,7 @@ from django.db.models import Prefetch, F, FloatField, ExpressionWrapper
 #
 from applications.venta.models import Sale, SaleDetail
 
-
+# https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.prefetch_related
 def detalle_ventas_no_cerradas():
     # recuepramos arry de id de ventas no cerradas
     ventas = Sale.objects.ventas_no_cerradas()

@@ -31,7 +31,8 @@ class ProductManager(models.Manager):
         )
         #
         consulta.update(count=(F('count') + 1))
-    
+        
+    # __lt, significa menor o igual
     def productos_en_cero(self):
         #
         consulta = self.filter(

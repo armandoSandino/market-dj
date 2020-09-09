@@ -10,6 +10,7 @@ def detalle_resumen_ventas(date_start, date_end):
     
     if date_start and date_end:
         ventas = Sale.objects.ventas_en_fechas(date_start, date_end)
+        # https://docs.djangoproject.com/en/3.1/ref/models/querysets/#django.db.models.query.QuerySet.prefetch_related
         consulta = ventas.prefetch_related(
             Prefetch(
                 'detail_sale', 
